@@ -176,7 +176,7 @@ class Company:
         self.employees=[]
     def hire(self,employee):
         self.employees.append(employee)
-emp=Employee("Dimple")
+emp=Employee("Dimple") # This single object is being referenced by multiple Company objects.
 company1=Company("Zoox")
 company2=Company("BNSF")
 company1.hire(emp)
@@ -381,4 +381,5 @@ Use Realization (Interfaces) when:
 Unrelated classes share a capability (Flyable, Serializable, Comparable)
 Multiple inheritance of behavior is needed
 You want maximum flexibility and loose coupling
+
 The contract matters more than shared implementation'''
