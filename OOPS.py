@@ -410,7 +410,8 @@ d=Dog()
 d.sound()
 d.greet()
 # 4.1.3 Abstract Properties
-'''Abstract properties work like abstract methods but are used for properties. These properties are declared with @property decorator and marked as abstract using @abstractmethod. Subclasses must implement these properties.'''
+'''Abstract properties work like abstract methods but are used for properties. These properties are declared with @property decorator and marked as abstract using @abstractmethod. Subclasses must implement these properties. Preferred when the property is a characteristic of the class rather than its action, like Animal is a species, employee has salary and rectangle has area'''
+'''Even though a property is implemented using a method internally, it represents state, not behavior. @property allows us to compute the value while preserving attribute-style access, which improves encapsulation and design clarity.'''
 from abc import ABC, abstractmethod
 class Animal(ABC):
     @property
@@ -422,7 +423,7 @@ class Dog(Animal):
     def species(self):
         print("canine")
 d=Dog()
-d.species # see that there is no () when calling species (no d.species())
+d.species # see that there is no () when calling species (no d.species()) - it acts like a state/attribute but not behavior
 # 4.1.4 Abstract Class Instantiation
 '''Abstract classes cannot be instantiated directly. This is because they contain one or more abstract methods or properties that lack implementations. Attempting to instantiate an abstract class results in a TypeError.'''
 from abc import ABC, abstractmethod
@@ -489,5 +490,6 @@ class D(B,C):
     pass
 # Method Resolution Order D->B->C->A
     
+
 
 
