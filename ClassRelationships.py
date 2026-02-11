@@ -337,7 +337,7 @@ Use dependency injection when:
 2. You want easy testing
 3. You expect changes in implementation
 '''
-# 2.5 Dependency 
+# 2.5 Realization
 '''Realization is a relationship between a class and an interface (or abstract class). The interface defines a contract (methods without implementation). The class realizes (implements) that contract. In Python, we usually do this using abstract base classes (ABC)'''
 '''Real-World Example- Interface: Payment, Classes: CreditCardPayment, PayPalPayment.Both must implement pay(amount) method — that is realization.'''
 # 2.5.1 Example
@@ -383,3 +383,4 @@ Multiple inheritance of behavior is needed
 You want maximum flexibility and loose coupling
 
 The contract matters more than shared implementation'''
+
